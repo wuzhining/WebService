@@ -7,15 +7,43 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
    <element name="getService">
     <complexType>
      <sequence>
-      <element name="usrName" type="xsd:string"/>
-      <element name="usrPwd" type="xsd:string"/>
+      <element name="str" type="xsd:string"/>
      </sequence>
     </complexType>
    </element>
    <element name="getServiceResponse">
     <complexType>
      <sequence>
-      <element name="getServiceReturn" type="xsd:anyType"/>
+      <element name="getServiceReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getServiceObject">
+    <complexType>
+     <sequence>
+      <element name="usrName" type="xsd:string"/>
+      <element name="usrPwd" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getServiceObjectResponse">
+    <complexType>
+     <sequence>
+      <element name="getServiceObjectReturn" type="xsd:anyType"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getServiceAgian">
+    <complexType>
+     <sequence>
+      <element name="str" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getServiceAgianResponse">
+    <complexType>
+     <sequence>
+      <element name="getServiceAgianReturn" type="xsd:string"/>
      </sequence>
     </complexType>
    </element>
@@ -30,9 +58,41 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    </wsdl:message>
 
+   <wsdl:message name="getServiceObjectResponse">
+
+      <wsdl:part element="impl:getServiceObjectResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getServiceAgianResponse">
+
+      <wsdl:part element="impl:getServiceAgianResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
    <wsdl:message name="getServiceRequest">
 
       <wsdl:part element="impl:getService" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getServiceObjectRequest">
+
+      <wsdl:part element="impl:getServiceObject" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getServiceAgianRequest">
+
+      <wsdl:part element="impl:getServiceAgian" name="parameters">
 
       </wsdl:part>
 
@@ -47,6 +107,30 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
        </wsdl:input>
 
          <wsdl:output message="impl:getServiceResponse" name="getServiceResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getServiceObject">
+
+         <wsdl:input message="impl:getServiceObjectRequest" name="getServiceObjectRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getServiceObjectResponse" name="getServiceObjectResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getServiceAgian">
+
+         <wsdl:input message="impl:getServiceAgianRequest" name="getServiceAgianRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getServiceAgianResponse" name="getServiceAgianResponse">
 
        </wsdl:output>
 
@@ -69,6 +153,42 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
          </wsdl:input>
 
          <wsdl:output name="getServiceResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getServiceObject">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getServiceObjectRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getServiceObjectResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getServiceAgian">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getServiceAgianRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getServiceAgianResponse">
 
             <wsdlsoap:body use="literal"/>
 

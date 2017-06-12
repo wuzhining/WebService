@@ -10,11 +10,19 @@
       <parameter name="className" value="com.service.model.demo"/>
       <parameter name="wsdlPortType" value="demo"/>
       <parameter name="typeMappingVersion" value="1.2"/>
-      <operation xmlns:operNS="http://model.service.com" xmlns:retNS="http://model.service.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getService" qname="operNS:getService" returnQName="retNS:getServiceReturn" returnType="rtns:anyType" soapAction="">
+      <operation xmlns:operNS="http://model.service.com" xmlns:retNS="http://model.service.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getService" qname="operNS:getService" returnQName="retNS:getServiceReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://model.service.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:str" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://model.service.com" xmlns:retNS="http://model.service.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getServiceObject" qname="operNS:getServiceObject" returnQName="retNS:getServiceObjectReturn" returnType="rtns:anyType" soapAction="">
         <parameter xmlns:pns="http://model.service.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:usrName" type="tns:string"/>
         <parameter xmlns:pns="http://model.service.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:usrPwd" type="tns:string"/>
       </operation>
-      <parameter name="allowedMethods" value="getService"/>
+      <operation xmlns:operNS="http://model.service.com" xmlns:retNS="http://model.service.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getServiceAgian" qname="operNS:getServiceAgian" returnQName="retNS:getServiceAgianReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://model.service.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:str" type="tns:string"/>
+      </operation>
+      <parameter name="allowedMethods" value="getServiceObject getServiceAgian getService"/>
 
+      <typeMapping xmlns:ns="http://model.service.com" qname="ns:&gt;getServiceAgianResponse" type="java:com.service.model.GetServiceAgianResponse" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+      <typeMapping xmlns:ns="http://model.service.com" qname="ns:&gt;getServiceAgian" type="java:com.service.model.GetServiceAgian" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
   </service>
 </deployment>
