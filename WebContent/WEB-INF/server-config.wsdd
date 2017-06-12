@@ -34,11 +34,11 @@
  </ns1:service>
  <ns1:service name="service" provider="java:RPC" style="wrapped" use="literal">
   <ns1:parameter name="allowedMethods" value="*"/>
-  <ns1:parameter name="typeMappingVersion" value="1.2"/>
   <ns1:parameter name="wsdlPortType" value="service"/>
-  <ns1:parameter name="className" value="com.service.model.ServiceSoapBindingSkeleton"/>
-  <ns1:parameter name="wsdlServicePort" value="service"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
   <ns1:parameter name="schemaQualified" value="http://model.service.com"/>
+  <ns1:parameter name="wsdlServicePort" value="service"/>
+  <ns1:parameter name="className" value="com.service.model.ServiceSoapBindingSkeleton"/>
   <ns1:parameter name="wsdlTargetNamespace" value="http://model.service.com"/>
   <ns1:parameter name="wsdlServiceElement" value="serviceService"/>
  </ns1:service>
@@ -51,6 +51,8 @@
   <ns1:parameter name="schemaQualified" value="http://model.service.com"/>
   <ns1:parameter name="wsdlTargetNamespace" value="http://model.service.com"/>
   <ns1:parameter name="wsdlServiceElement" value="demoService"/>
+  <ns2:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns1:&gt;getServiceAgianResponse" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:com.service.model.GetServiceAgianResponse" xmlns:ns1="http://model.service.com" xmlns:ns2="http://xml.apache.org/axis/wsdd/"/>
+  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns2:&gt;getServiceAgian" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:com.service.model.GetServiceAgian" xmlns:ns2="http://model.service.com"/>
  </ns1:service>
  <ns1:transport name="http">
   <ns1:requestFlow>

@@ -8,7 +8,15 @@
 package com.service.model;
 
 public class DemoSoapBindingImpl implements com.service.model.Demo{
-    public java.lang.Object getService(java.lang.String usrName, java.lang.String usrPwd) throws java.rmi.RemoteException {
+    public java.lang.String getService(java.lang.String str) throws java.rmi.RemoteException {
+        return null;
+    }
+
+    public java.lang.Object getServiceObject(java.lang.String usrName, java.lang.String usrPwd) throws java.rmi.RemoteException {
+        return null;
+    }
+
+    public java.lang.String getServiceAgian(java.lang.String str) throws java.rmi.RemoteException {
         return null;
     }
 

@@ -8,5 +8,7 @@
 package com.service.model;
 
 public interface Demo extends java.rmi.Remote {
-    public java.lang.Object getService(java.lang.String usrName, java.lang.String usrPwd) throws java.rmi.RemoteException;
+    public java.lang.String getService(java.lang.String str) throws java.rmi.RemoteException;
+    public java.lang.Object getServiceObject(java.lang.String usrName, java.lang.String usrPwd) throws java.rmi.RemoteException;
+    public java.lang.String getServiceAgian(java.lang.String str) throws java.rmi.RemoteException;
 }
